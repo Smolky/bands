@@ -39,6 +39,7 @@ The content is loaded using the $.get function and loaded back to JSON with xml2
 - *Empty database.* Cleans the database
 
 ### Software used
+- HTML5 Boilerplate
 - Bootstrap 4.0.0.alpha6
 - Google Font Loader
 - XML2JSON (https://github.com/sparkbuzz/jQuery-xml2json)
