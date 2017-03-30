@@ -14,6 +14,7 @@ To carry out the project I created a serie of HTML Templates using the template 
 Another interesting thing is the use of contenteditable tag to allow users to edit content direct from the tags without need to load all the content using forms. Anyway, contenteditable use is widely supported but for mobile devices maybe the form approach could be more suitable.
 
 Structured data has been use to remark this application as a webpage
+
     <!-- Structured data -->
     <script type="application/ld+json">
     {
