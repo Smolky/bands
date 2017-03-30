@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Supertramp's bands</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/vex.css">
+        <link rel="stylesheet" href="css/vex-theme-os.css">
+        
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+        
+
+        <!-- Modernizr -->
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        
+        <!-- Structured data -->
+        <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "author": "José Antonio García Díaz",
+            "publisher": "Universidad de Murcia",
+            "name": "Supertrump bands",
+            "url": "https://smolky.github.io/bands/"
+        }
+        </script>        
+        
+    </head>
+    <body>
+
+    
+        <!-- Templates -->
+        <template id="band-template">
+            <article class="band card">
+                <div class="card-block">
+                    <h4 class="card-title band-header">
+                        <span 
+                            class="band-title band-title-ph" 
+                            contenteditable="true" 
+                            placeholder="name of the band"></span>
+                        
+                        <small 
+                            class="band-year band-year-ph" 
+                            contenteditable="true" 
+                            placeholder="foundation year"></small>
+                    </h4>
+                    
+                    <h3>
+                        Members
+                    </h3>
+                    
+                    <ul class="band-members band-members-ph"></ul>
+                    
+                    
+                    <!-- Actions -->
+                    <button type="button" class="btn btn-success create-member-action">
+                        <span class="fa fa-plus"></span>
+                        Add
+                    </button>
+                    
+                    <button type="button" class="btn btn-danger delete-members-action">
+                        <span class="fa fa-close"></span>
+                        Delete
+                    </button>
+                    
+                    
+                    
+                    <!-- Actions -->
+                    <button type="button" class="band-delete-button delete-band-action">
+                        <span class="fa fa-close"></span>
+                    </button>
+                    
+                </div>
+                
+            </article>
+        </template>
+        
+        <template id="member-template">
+            <li>
+                <input type="checkbox" />
+                <span contenteditable="true" class="member-name" placeholder="name of the member"></span>
+            </li>
+        </template>
+        
+        
+    
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col">    
+                        <h1 class="header-title">
+                            <span class="fa fa-headphones"></span>
+                            <strong>SuperTramp's</strong> Bands
+                        </h1>
+                        <p class="header-author">José Antonio García Díaz</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- End of header -->
+    
+    
+        <div class="container">
+            <div class="row">
+                <div class="col col-sm-12 col-md-3">
+                
+                    <div class="btn-group-vertical" role="group" aria-label="Basic example">
+                
+                        <button 
+                            type="button" 
+                            class="btn btn-primary load-schema-action" 
+                            data-toggle="tooltip" 
+                            data-placement="bottom" 
+                            title="Loading data from a global repository">
+                            Load sample data
+                        </button>
+                        
+                        <button type="button" class="btn btn-primary btn-alert store-in-database-action">
+                            Store in browser database
+                        </button>
+                        
+                        <button type="button" class="btn btn-secondary retrieve-from-database-action">
+                            Retrieve from database
+                        </button>
+                        
+                        <button type="button" class="btn btn-secondary empty-database-action">
+                            Empty database
+                        </button>
+                    </div>
+                </div>
+                <div class="col col-sm-12 col-md-9">
+                    <div class="data">
+                        
+                    </div>
+                    
+                    <div class="global-actions">
+                        <button type="button" class="btn btn-lg btn-success create-band-action">
+                            <span class="fa fa-plus"></span>
+                            Create a band
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+
+        
+        <!-- Google fonts loader -->
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+        <script>
+            WebFont.load({
+                google: {
+                    families: ['Oswald:400,600,700,400']
+                }
+            });
+        </script>
+
+        
+        <!-- Scripts -->
+        <!-- jQuery with CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        
+        
+        <!-- Bootstrap -->
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        
+        
+        <!-- Tools -->
+        <script src="js/vendor/xml2json.js"></script>
+        <script src="js/vendor/vex.combined.min.js"></script>
+        <script>vex.defaultOptions.className = 'vex-theme-os'</script>        
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        
+
+    </body>
+</html>
