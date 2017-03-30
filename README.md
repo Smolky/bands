@@ -1,8 +1,8 @@
-### HTML 5, JQuery and Bootstrap
+# HTML 5, JQuery and Bootstrap
 ## Current Web trends 2016-17
-# José Antonio García Díaz
+### José Antonio García Díaz
 
-# Introduction
+### Introduction
 This assignment consist in the creation of a Single Page Application to retrieve information from an external datasource and the ability to manage localdata
 
 For this assignment I used a HTML5 Boiler template as a foundation combined with Twitter Bootstrap (v4) and others tools.
@@ -26,7 +26,7 @@ Structured data has been use to remark this application as a webpage
     }
     </script>   
 
-# Tutorial
+### Tutorial
 You can view the project here:
 https://smolky.github.io/bands/
 
@@ -37,7 +37,7 @@ The content is loaded using the $.get function and loaded back to JSON with xml2
 - *Retrieve from database.* Retrieves the last localStorage information.
 - *Empty database.* Cleans the database
 
-# Software used
+### Software used
 - Bootstrap 4.0.0.alpha6
 - Google Font Loader
 - XML2JSON (https://github.com/sparkbuzz/jQuery-xml2json)
