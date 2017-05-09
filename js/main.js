@@ -24,11 +24,12 @@ $(document).ready (function () {
     }
     
     
+    
     /**
      * load_from_json
      *
      * This function will load the JSON representation in 
-     * the contenteditable form
+     * the content-editable form
      *
      * @param bands JSON
      *
@@ -64,6 +65,7 @@ $(document).ready (function () {
             
             // Change placeholders in our template
             html_band
+                .find ('.band-same-as-ph').attr ('value', band.sameas).end ()
                 .find ('.band-title-ph').html (band.title).end ()
                 .find ('.band-year-ph').html (band.year).end ()
                 .find ('.band-members-ph').html (html_members)
@@ -82,11 +84,7 @@ $(document).ready (function () {
     }
     
     
-    // Bind data events
-    // This way of binding items allows us to have
-    // the events attached to the parent element so
-    // when we add/remove elements inside we don't
-    // need to reattach events.
+    
     data.on ({
     
         // While typing we don't want to enter more
@@ -221,6 +219,7 @@ $(document).ready (function () {
             var self = $(this);
             var band_title = self.find ('.band-title-ph').html ();
             var band_year = self.find ('.band-year-ph').html ();
+            var band_same_as = self.find ('.band-same-as-ph').val ();
             
             
             // Validate
@@ -243,14 +242,15 @@ $(document).ready (function () {
             bands.push ({
                 'title': band_title,
                 'year': band_year,
-                'members': members
+                'members': members,
+                'sameas': band_same_as
             });
         });
         
         
         // Store
         if ( ! bands.length) {
-            vex.dialog.alert ("There is no one valid band to store. Date and title are requried.");
+            vex.dialog.alert ("There is no one valid band to store. Date and title are required.");
             return;
         }
         

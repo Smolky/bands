@@ -156,6 +156,18 @@ body {
     font-size: 1.25rem;
 }
 
+.band-same-as-ph {
+    display: block;
+    width: 100%;
+    margin: 0 0 1rem 0;
+    padding: 0.3rem 0.5rem;
+    font-style: italic;
+}
+
+.band-same-as-ph:invalid {
+    background-color: #ff7777;
+}
+
 .band-title,
 .band-year {
     display: block;
@@ -229,7 +241,7 @@ body {
     }
     
     .band-members {
-        margin: 0 0 0 3rem;
+        margin: 0 0 2rem 3rem;
         font-size: 1.25rem;
         list-style-type: none;
         font-style: italic;
