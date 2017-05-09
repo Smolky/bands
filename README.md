@@ -27,6 +27,50 @@ Structured data has been use to remark this application as a webpage
     }
     </script>   
 
+As additional modification, microdata has been attached to the bands member using this format:
+
+    <article class="band card" itemscope="" itemtype="http://schema.org/MusicGroup">
+        <div class="card-block">
+            <h4 class="card-title band-header">
+                <span itemprop="name" class="band-title band-title-ph" contenteditable="true">bands-title</span>
+                <small class="band-year band-year-ph" contenteditable="true">year</small>
+            </h4>
+                        
+                        
+            <!-- Meta -->
+            <section>
+                <p>
+                    Here you can reference the band from an external source
+                    like <a href="http://es.dbpedia.org/page/Angra" target="_blank">dbpedia</a>
+                </p>
+                <input 
+                    class="band-same-as-ph" 
+                    type="url" name="sameas" 
+                    placeholder="same as..." 
+                    value="band-same-as" />
+             </section>
+                        
+            <!-- Members -->
+            <section>
+                <h3>
+                    Members
+                </h3>
+                            
+                <ul class="band-members band-members-ph">
+                    <li>
+                        <input type="checkbox">
+                            <span 
+                                itemscope="" 
+                                itemtype="http://schema.org/Person" 
+                                contenteditable="true" 
+                                class="member-name" 
+                                placeholder="name of the member">band-member-name</span>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </article>
+
 ### Tutorial
 You can view the project here:
 https://smolky.github.io/bands/
